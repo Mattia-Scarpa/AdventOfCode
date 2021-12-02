@@ -9,7 +9,7 @@ int main()
 {
 
     std::ifstream inputFile;
-    inputFile.open("../input.txt");
+    inputFile.open("../inputDay1.txt");
 
     if (!inputFile) {
         std::cerr << "Unable to open input file!" << std::endl;
