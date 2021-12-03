@@ -25,15 +25,6 @@ int main()
 
     std::cout << "Analyzing input file..." << std::endl;
 
-    /*while (inputFile >> depth) {
-        d.push_back(depth);
-        if (n > 2) {
-            count += d[n - 3] < d[n];
-        }
-        n++;
-    }*/
-
-    // OPTIMIZATION //
     int d_sum[4]{};
 
     while (inputFile >> depth) {
