@@ -31,10 +31,6 @@ int main()
 			count[count.size()-1 - i] += digit;
 		}
 		n++;
-
-		/*for (size_t j = 0; j < count.size(); j++)
-			std::cout << "-" << count[j];
-		std::cout << std::endl;*/
 	}
 
 	int gamma = 0, epsilon = 0;
