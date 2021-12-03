@@ -16,7 +16,7 @@ struct position {
 
 int main()
 {
-	// Reading depth vaues and store it in an array from inputFiles
+    // Reading depth vaues and store it in an array from inputFiles
 
     std::ifstream inputFile;
     inputFile.open("../inputCommand.txt");
@@ -36,15 +36,15 @@ int main()
 
     int x;
 
-   while (inputFile >> c) {
-       inputFile >> x;
+    while (inputFile >> c) {
+        inputFile >> x;
 
-       position.p += (c=="forward") * x;
-       position.d += (c == "down") * x - (c == "up") * x;
+        position.p += (c == "forward") * x;
+        position.d += (c == "down") * x - (c == "up") * x;
     }
 
-   std::cout << "Your final position is ->" <<  position.p << "\nWhile your final depth is -> " << position.d << std::endl;
-   std::cout << "Multiplying your final horizontal position by your final depth you obtain: " << position.p << " * " << position.d << " = " << position.p * position.d << std::endl;
+    std::cout << "Your final position is ->" << position.p << "\nWhile your final depth is -> " << position.d << std::endl;
+    std::cout << "Multiplying your final horizontal position by your final depth you obtain: " << position.p << " * " << position.d << " = " << position.p * position.d << std::endl;
 
-   return position.p * position.d;
+    return position.p * position.d;
 }
