@@ -28,8 +28,6 @@ int main()
 
     std::string c;
 
-    //std::vector<int> commands;
-
     position position;
 
     std::cout << "Analyzing input file..." << std::endl;

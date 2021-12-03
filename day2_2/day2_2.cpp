@@ -8,15 +8,16 @@
 
 
 struct position {
-    int p = 0;
-    int d = 0;
+    int p = 0;          // position variable
+    int d = 0;          // depth variable
+    int a = 0;          // aim variable
 };
 
 //------------------------------------------------------------------------
 
 int main()
 {
-    // Reading depth vaues and store it in an array from inputFiles
+    // Reading depth vaues from inputFiles
 
     std::ifstream inputFile;
     inputFile.open("../inputCommand.txt");
@@ -28,19 +29,18 @@ int main()
 
     std::string c;
 
-    //std::vector<int> commands;
-
     position position;
 
     std::cout << "Analyzing input file..." << std::endl;
 
     int x;
 
-    while (inputFile >> c) {
+    while (inputFile >> c) {    // reading command instructions
         inputFile >> x;
 
         position.p += (c == "forward") * x;
-        position.d += (c == "down") * x - (c == "up") * x;
+        position.d += (c == "forward") * x * position.a;
+        position.a += (c == "down") * x - (c == "up") * x;
     }
 
     std::cout << "Your final position is ->" << position.p << "\nWhile your final depth is -> " << position.d << std::endl;
