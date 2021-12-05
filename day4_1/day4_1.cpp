@@ -87,7 +87,6 @@ int main() {
 						if (boards[b].cols[i] == 5 || boards[b].rows[j] == 5) {
 							winningBoard = boards[b].sum;
 							last = extraction;
-							std::cout << b << std::endl;
 							std::cout << "The winning board has sum " << winningBoard << ".\nThe final score is -> " << winningBoard * last << std::endl;
 							return winningBoard * last;
 							exit(1);
