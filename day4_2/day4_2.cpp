@@ -6,7 +6,6 @@
 #include <string>
 #include <cstring>
 #include <fstream>
-#include <stdlib.h>
 
 constexpr auto BOARD_SIZE = 5;
 int winningBoard, last;
@@ -57,7 +56,6 @@ void fillBoards(std::ifstream& inputFile, std::vector<board>& boards) {
 
 void findExtracted(int extraction, std::vector<board> &boards) {
 	for (size_t b = 0; b < boards.size(); b++) {
-		std::cout << boards.size() << std::endl;
 		for (size_t i = 0; i < BOARD_SIZE; i++) {
 			for (size_t j = 0; j < BOARD_SIZE; j++) {
 				if (boards[b].table[i][j] == extraction) {
@@ -81,7 +79,6 @@ void findExtracted(int extraction, std::vector<board> &boards) {
 				}
 			}
 		}
-		std::cout << b << "--" << boards.size() << std::endl;
 	}
 }
 
